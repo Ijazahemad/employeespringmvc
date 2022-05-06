@@ -48,7 +48,30 @@ public class EmployeeServiceImplementation implements EmployeeService{
 		
 		Employee emp = repository.getEmployee(id);
 		
-		return null;
+		return emp;
+	}
+
+	@Override
+	public boolean updateEmployee(Employee e) {
+		
+		int yob = Integer.parseInt(e.getDob().substring(0,4));
+		
+		int curYear = LocalDate.now().getYear();
+		
+		int age = curYear-yob;
+		
+		e.setAge(age);
+		
+		
+		return repository.updateEmployeeData(e);
+	}
+
+	@Override
+	public boolean deleteEmployee(int id) {
+		
+		
+		
+		return repository.deleteEmployee(id);
 	}
 
 }

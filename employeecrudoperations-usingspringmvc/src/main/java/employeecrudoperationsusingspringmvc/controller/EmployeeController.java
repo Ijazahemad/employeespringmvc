@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import employeecrudoperationsusingspringmvc.dto.Employee;
 import employeecrudoperationsusingspringmvc.service.EmployeeService;
@@ -39,17 +41,18 @@ public class EmployeeController {
 		
 		boolean isInserted = service.addEmployee(e);
 		
-		String msg = "";
+		/*String msg = "";
 		
 		if(isInserted)
 			msg = "Inserted";
 		else
 			msg = "Not Inserted";;
 		
-		myModel.addAttribute("message",msg);
-		
-		return "displayMessage";
-		
+		myModel.addAttribute("message",msg);*/
+		if(isInserted)
+			return "redirect:/employee/displayAll";
+		else
+			return "redirect:/employee/addEmployeeForm";
 	}
 	
 	@RequestMapping(path="/displayAll",method=RequestMethod.GET)
@@ -82,7 +85,26 @@ public class EmployeeController {
 	public String updateEmployee(Employee e,Model myModel) {
 	
 		System.out.println(e);
-		return null;
 		
+		boolean isUpdated = service.updateEmployee(e);
+		
+		/*String msg = "";
+		
+		if(isUpdated)
+			msg = "Updated !!";
+		else
+			msg = "Not Updated";
+
+		myModel.addAttribute("message",msg);*/
+		
+		return "redirect:/employee/displayAll";
+	}
+	
+	@RequestMapping(path="/delete/{id}",method=RequestMethod.GET)
+	public String deleteEmployee(@PathVariable("id") int id) {
+		
+		service.deleteEmployee(id);
+		
+		return "redirect:/employee/displayAll";
 	}
 }

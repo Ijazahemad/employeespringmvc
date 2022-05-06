@@ -89,8 +89,54 @@ public class EmployeeRepositoryImplementation implements EmployeeRepository {
 		
 		session.close();
 		
-		
 		return emp;
+	}
+
+
+	@Override
+	public boolean updateEmployeeData(Employee e) {
+		
+		boolean flag = false;
+		
+		Session session = factory.openSession();
+		
+		session.update(e);
+		
+		Transaction tx = session.beginTransaction();
+		
+		try {
+			tx.commit();
+			flag = true;
+		} catch (Exception e2) {
+			flag = false;
+			tx.rollback();
+		}
+		
+		return flag;
+		
+	}
+
+
+	@Override
+	public boolean deleteEmployee(int id) {
+		
+		Session session = factory.openSession();
+		
+		Transaction tx = session.beginTransaction();
+		
+		
+		session.delete(getEmployee(id));
+		
+		try {
+			
+			tx.commit();
+			return true;
+			
+		} catch (Exception e) {
+			tx.rollback();
+			return false;
+		}
+		
 	}
 
 }

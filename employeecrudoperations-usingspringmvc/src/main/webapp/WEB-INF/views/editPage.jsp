@@ -17,7 +17,8 @@
 		
 		
 		<div class="container">
-			<form action="update" method="post">
+			<form action="http://localhost:8080/employeecrudoperations-usingspringmvc/employee/update" method="post">
+			<input type="hidden" name="id" value="${ emp.id }">
 				<div class="mb-3">
 					<label for="name" class="form-label">Name</label> <input
 						type="text" class="form-control" id="exampleInputEmail1"

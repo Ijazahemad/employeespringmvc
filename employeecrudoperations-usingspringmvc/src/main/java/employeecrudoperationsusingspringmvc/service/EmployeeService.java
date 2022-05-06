@@ -11,5 +11,9 @@ public interface EmployeeService {
 	List<Employee> displayAllEmployees();
 
 	Employee searchEmployee(int id);
+	
+	boolean updateEmployee(Employee e);
+
+	boolean deleteEmployee(int id);
 
 }
