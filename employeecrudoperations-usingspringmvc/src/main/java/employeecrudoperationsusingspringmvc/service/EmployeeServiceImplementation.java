@@ -69,9 +69,27 @@ public class EmployeeServiceImplementation implements EmployeeService{
 	@Override
 	public boolean deleteEmployee(int id) {
 		
-		
-		
 		return repository.deleteEmployee(id);
+	}
+
+	@Override
+	public List<Employee> searchEmployee(String name) {
+		
+		
+		return repository.getEmployee(name);
+	}
+
+	@Override
+	public List<Employee> searchEmployee(double lowerlimit, double upperlimit) {
+		
+		
+		return repository.getAllEmployee(lowerlimit,upperlimit);
+	}
+
+	@Override
+	public List<Employee> searchEmployeeBasedOnAge(int lowerlimit, int upperlimit) {
+	
+		return repository.getAllEmployeeBasedOnAge(lowerlimit,upperlimit);
 	}
 
 }

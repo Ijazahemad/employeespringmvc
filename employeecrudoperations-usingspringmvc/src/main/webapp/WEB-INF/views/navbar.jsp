@@ -12,16 +12,19 @@
 	crossorigin="anonymous">
 <!-- Font Awesome -->
 <link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-	rel="stylesheet" />
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
 <!-- Google Fonts -->
 <link
-	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-	rel="stylesheet" />
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
 <!-- MDB -->
 <link
-	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
-	rel="stylesheet" />
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
 </head>
 <body>
 	<div class="container">
@@ -38,7 +41,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#">Home</a></li>
+							aria-current="page" href="index">Home</a></li>
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="addEmployee">Add Employee</a></li>
 						<li class="nav-item"><a class="nav-link active"
@@ -49,23 +52,22 @@
 							role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								Search </a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="searchBasedOnId">Search By Id</a></li>
-
+								<li><a class="dropdown-item" href=searchBasedOnId>Search By Id</a></li>
 								<li><a class="dropdown-item" href="searchBasedOnName">Search By Name</a></li>
 
 
 
 
-								<li><a class="dropdown-item" href="#"> Search By Status
-										&raquo; </a>
+								<li><a class="dropdown-item" href="#"> Search By Status &raquo;
+								</a>
 									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="#">Search By
-												Active Employees</a></li>
-										<li><a class="dropdown-item" href="#">Search By
-												Active Employees</a></li>
+										<li><a class="dropdown-item" href="#">Search By Active Employees</a>
+										</li>
+										<li><a class="dropdown-item" href="#">Search By Active Employees</a>
+										</li>
 									</ul></li>
 
-				
+
 
 
 
@@ -85,9 +87,7 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-	<!-- MDB -->
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+		<!-- MDB -->
 
 </body>
 </html>

@@ -14,6 +14,7 @@
 </head>
 <body>
 
+		<jsp:include page="navbar.jsp"></jsp:include>
 		
 		
 		<div class="container">
@@ -63,13 +64,13 @@
 					<label>Status</label>
 					<div class="form-check">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault1" name="status" value="1"> 
+						 id="flexRadioDefault1" name="status" value="1"> 
 							<label
 							class="form-check-label" for="flexRadioDefault1" > Active </label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio"
-							name="flexRadioDefault" id="flexRadioDefault2"  name="status" value="0" checked="checked"> <label
+							 id="flexRadioDefault2"  name="status" value="0" checked="checked"> <label
 							class="form-check-label" for="flexRadioDefault2" >Inactive</label>
 					</div>
 				</div>

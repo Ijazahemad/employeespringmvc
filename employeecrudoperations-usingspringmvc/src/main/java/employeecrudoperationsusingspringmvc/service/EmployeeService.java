@@ -16,4 +16,10 @@ public interface EmployeeService {
 
 	boolean deleteEmployee(int id);
 
+	List<Employee> searchEmployee(String name);
+
+	List<Employee> searchEmployee(double lowerlimit, double upperlimit);
+
+	List<Employee> searchEmployeeBasedOnAge(int lowerlimit, int upperlimit);
+
 }

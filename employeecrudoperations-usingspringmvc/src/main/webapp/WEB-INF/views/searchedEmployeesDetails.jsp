@@ -25,8 +25,6 @@
 					<th>Age</th>
 					<th>Salary</th>
 					<th>Active</th>
-					<th>Edit</th>
-					<th>Delete</th>
 				</tr>
 				<c:forEach items="${ allEmployees }" var="emp">
 					<tr>
@@ -37,8 +35,6 @@
 						<td>${ emp.age }</td>
 						<td>${  emp.salary }</td>
 						<td>${ emp.status }</td>
-						<td><a href="edit/${ emp.id }">Edit</a>
-						<td><a href="delete/${ emp.id }">Delete</a>
 					</tr>
 				</c:forEach>
 			</table>

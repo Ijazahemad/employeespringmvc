@@ -16,4 +16,10 @@ public interface EmployeeRepository {
 	boolean updateEmployeeData(Employee e);
 
 	boolean deleteEmployee(int id);
+
+	List<Employee> getEmployee(String name);
+
+	List<Employee> getAllEmployee(double lowerlimit, double upperlimit);
+
+	List<Employee> getAllEmployeeBasedOnAge(int lowerlimit, int upperlimit);
 }
